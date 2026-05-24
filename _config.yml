@@ -1,1 +1,16 @@
 
+title: Dennis Kontic Cybersecurity Lab Portfolio
+description: Hands on blue team, DFIR, SOC analysis, threat hunting, malware analysis, and detection engineering projects.
+theme: minima
+markdown: kramdown
+baseurl: "/cybersecurity-lab-portfolio"
+url: "https://denniskontic.github.io"
+
+header_pages:
+  - index.md
+
+minima:
+  social_links:
+    - title: GitHub
+      icon: github
+      url: https://github.com/DennisKontic
