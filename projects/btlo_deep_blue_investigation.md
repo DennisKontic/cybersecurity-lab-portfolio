@@ -238,9 +238,11 @@ Alert on local user creation
 Alert on additions to Administrators and Remote Desktop Users
 Review firewall logs for RDP source activity
 Reimage the host if integrity cannot be trusted
-Video Walkthrough
 
-Watch my Deep Blue Investigation walkthrough on YouTube
+
+## Video Walkthrough
+
+[Watch my Deep Blue Investigation walkthrough on YouTube](https://www.youtube.com/watch?v=_UdxCZ0bO2E)
 
 What This Project Demonstrates
 
