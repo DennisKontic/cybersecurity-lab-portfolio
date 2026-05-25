@@ -1,3 +1,7 @@
+---
+layout: project
+title: APT34 OilRig Tabletop Exercise
+---
 # APT34: Zeroed Out by OilRig: TryHackMe Tabletop Exercise
 
 ## Overview
