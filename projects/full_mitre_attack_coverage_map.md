@@ -1,3 +1,7 @@
+---
+layout: project
+title: Full MITRE ATT&CK Coverage Map
+---
 # Full MITRE ATT&CK Coverage Map: Ascend Learning
 
 ## Overview
