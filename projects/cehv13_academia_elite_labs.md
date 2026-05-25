@@ -1,3 +1,7 @@
+---
+layout: project
+title: CEHv13 Academia ELITE Labs
+---
 # CEHv13 Academia ELITE Certification Bundle Labs
 
 ## Overview
