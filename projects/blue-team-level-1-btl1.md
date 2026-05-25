@@ -1,3 +1,7 @@
+---
+layout: project
+title: Blue Team Level 1 BTL1
+---
 # Blue Team Level 1: Security Blue Team BTL1
 
 ## Overview
