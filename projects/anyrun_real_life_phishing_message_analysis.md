@@ -1,3 +1,8 @@
+---
+layout: project
+title: Real Life Phishing Message Analysis Using ANY.RUN
+---
+
 # Analyzing Real Life Phishing Messages Using ANY.RUN
 
 ## Overview
