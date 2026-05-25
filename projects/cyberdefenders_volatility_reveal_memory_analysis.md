@@ -1,3 +1,7 @@
+---
+layout: project
+title: Volatility Reveal Memory Analysis
+---
 # Volatility Analysis: CyberDefenders Reveal
 
 ## Overview
