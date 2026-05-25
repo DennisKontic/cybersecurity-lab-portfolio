@@ -1,3 +1,7 @@
+---
+layout: project
+title: OpenWire Wireshark Analysis
+---
 # OpenWire Wireshark Analysis: CyberDefenders
 
 ## Overview
