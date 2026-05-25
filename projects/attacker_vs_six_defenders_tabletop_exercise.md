@@ -1,3 +1,7 @@
+---
+layout: project
+title: Attacker Vs Six Defenders Tabletop Exercise
+---
 # Attacker Vs Six Defenders Tabletop Exercise
 
 ## Overview
