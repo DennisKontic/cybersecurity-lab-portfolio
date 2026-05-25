@@ -1,3 +1,7 @@
+---
+layout: project
+title: BEC KY Investigation
+---
 # BEC KY Investigation: Blue Team Labs Online
 
 ## Overview
