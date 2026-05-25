@@ -1,1 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>{{ page.title }} | Dennis Kontic Cybersecurity Lab Portfolio</title>
+
+  <meta
+    name="description"
+    content="Dennis Kontic cybersecurity project writeup focused on blue team, SOC analysis, DFIR, malware analysis, threat intelligence, and detection engineering."
+  />
+
+  <style>
+    :root {
+      --bg: #050b14;
+      --panel: #0d1829;
+      --panel-light: #13233b;
+      --border: #1f3558;
+      --text: #e8f1ff;
+      --muted: #9fb3cc;
+      --blue: #38bdf8;
+      --blue-soft: rgba(56, 189, 248, 0.14);
+      --green: #22c55e;
+      --green-soft: rgba(34, 197, 94, 0.12);
+      --code-bg: #07111f;
+      --shadow: rgba(0, 0, 0, 0.38);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), transparent 32rem),
+        radial-gradient(circle at top right, rgba(34, 197, 94, 0.08), transparent 28rem),
+        linear-gradient(180deg, var(--bg) 0%, #07101d 48%, #050b14 100%);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a:hover {
+      color: #7dd3fc;
+      text-decoration: underline;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(16px);
+      background: rgba(5, 11, 20, 0.88);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .brand strong {
+      color: #ffffff;
+      font-size: 1rem;
+      letter-spacing: 0.2px;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 3rem;
+    }
+
+    .project-shell {
+      background: linear-gradient(145deg, rgba(13, 24, 41, 0.96), rgba(19, 35, 59, 0.90));
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: 0 20px 55px var(--shadow);
+      overflow: hidden;
+    }
+
+    .project-header {
+      padding: 2rem 2rem 1.3rem;
+      border-bottom: 1px solid var(--border);
+      background:
+        linear-gradient(135deg, rgba(56, 189, 248, 0.10), transparent),
+        linear-gradient(rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
+      background-size: auto, 42px 42px, 42px 42px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      color: var(--blue);
+      background: var(--blue-soft);
+      border: 1px solid rgba(56, 189, 248, 0.24);
+      border-radius: 999px;
+      padding: 0.4rem 0.75rem;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .project-header h1 {
+      margin: 0 0 1rem;
+      color: #ffffff;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.1;
+      letter-spacing: -1px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-top: 1rem;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0.68rem 0.95rem;
+      border-radius: 12px;
+      font-weight: 800;
+      border: 1px solid var(--border);
+      transition: transform 0.18s ease, background 0.18s ease, border 0.18s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+
+    .button-primary {
+      color: #06111d;
+      background: var(--blue);
+      border-color: var(--blue);
+    }
+
+    .button-primary:hover {
+      color: #06111d;
+      background: #7dd3fc;
+    }
+
+    .button-secondary {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .button-secondary:hover {
+      color: var(--text);
+      border-color: var(--blue);
+      background: rgba(56, 189, 248, 0.10);
+    }
+
+    .content {
+      padding: 2rem;
+    }
+
+    .content h1 {
+      color: #ffffff;
+      font-size: 2.2rem;
+      line-height: 1.15;
+      margin: 0 0 1.3rem;
+    }
+
+    .content h2 {
+      color: #ffffff;
+      font-size: 1.65rem;
+      margin: 2.3rem 0 0.8rem;
+      letter-spacing: -0.4px;
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .content h2::before {
+      content: "";
+      width: 4px;
+      height: 1.35rem;
+      border-radius: 999px;
+      background: var(--blue);
+      box-shadow: 0 0 18px rgba(56, 189, 248, 0.75);
+      flex: 0 0 auto;
+    }
+
+    .content h3 {
+      color: #ffffff;
+      font-size: 1.22rem;
+      margin: 1.6rem 0 0.5rem;
+    }
+
+    .content p,
+    .content li {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .content strong {
+      color: #ffffff;
+    }
+
+    .content ul,
+    .content ol {
+      padding-left: 1.35rem;
+    }
+
+    .content li {
+      margin-bottom: 0.25rem;
+    }
+
+    .content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.4rem;
+      overflow: hidden;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      display: table;
+    }
+
+    .content th {
+      background: rgba(56, 189, 248, 0.14);
+      color: #ffffff;
+      text-align: left;
+      font-weight: 800;
+    }
+
+    .content th,
+    .content td {
+      border: 1px solid var(--border);
+      padding: 0.75rem;
+      vertical-align: top;
+    }
+
+    .content td {
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .content code {
+      color: #d7efff;
+      background: rgba(255, 255, 255, 0.07);
+      padding: 0.16rem 0.35rem;
+      border-radius: 6px;
+      font-size: 0.92rem;
+    }
+
+    .content pre {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem;
+      overflow-x: auto;
+      box-shadow: inset 0 0 0 1px rgba(56, 189, 248, 0.04);
+    }
+
+    .content pre code {
+      background: transparent;
+      padding: 0;
+      color: #d7efff;
+      font-size: 0.92rem;
+    }
+
+    .content blockquote {
+      margin: 1rem 0;
+      padding: 0.8rem 1rem;
+      border-left: 4px solid var(--blue);
+      background: rgba(56, 189, 248, 0.08);
+      color: var(--muted);
+      border-radius: 10px;
+    }
+
+    .content hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2rem 0;
+    }
+
+    .notice {
+      margin-top: 2rem;
+      border: 1px solid rgba(56, 189, 248, 0.28);
+      background: rgba(56, 189, 248, 0.08);
+      border-radius: 18px;
+      padding: 1.2rem;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 2rem;
+      padding: 2rem 0 0;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 920px) {
+      .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .project-header,
+      .content {
+        padding: 1.25rem;
+      }
+
+      .content table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <strong>Dennis Kontic</strong>
+        <span>Cybersecurity Lab Portfolio</span>
+      </div>
+
+      <nav class="nav-links">
+        <a href="{{ site.baseurl }}/">Projects Home</a>
+        <a href="https://denniskontic.github.io/whoami/">Main Portfolio</a>
+        <a href="https://github.com/DennisKontic">GitHub</a>
+        <a href="https://www.youtube.com/@DonkeySec">YouTube</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <article class="project-shell">
+      <header class="project-header">
+        <div class="eyebrow">Blue Team Project</div>
+        <h1>{{ page.title }}</h1>
+
+        <div class="button-row">
+          <a class="button button-primary" href="{{ site.baseurl }}/">Back to Projects</a>
+          <a class="button button-secondary" href="https://denniskontic.github.io/whoami/">Main Portfolio</a>
+          <a class="button button-secondary" href="https://www.youtube.com/@DonkeySec">DonkeySec YouTube</a>
+        </div>
+      </header>
+
+      <div class="content">
+        {{ content }}
+      </div>
+    </article>
+
+    <footer>
+      © Dennis Kontic. Cybersecurity lab portfolio focused on blue team, DFIR, SOC analysis, threat hunting, and detection engineering.
+    </footer>
+  </main>
+</body>
+</html>
