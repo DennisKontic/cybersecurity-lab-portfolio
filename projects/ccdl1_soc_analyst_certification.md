@@ -1,4 +1,7 @@
-
+---
+layout: project
+title: CCDL1 SOC Analyst Certification
+---
 # CCDL1 SOC Analyst Certification
 
 ## Overview
