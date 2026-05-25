@@ -1,3 +1,7 @@
+---
+layout: project
+title: HTB CDSA Enterprise Intrusion Analysis
+---
 # Enterprise Intrusion Analysis and Incident Response: HTB CDSA
 
 ## Overview
