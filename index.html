@@ -149,7 +149,6 @@
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 0.45rem;
       color: var(--blue);
       background: var(--blue-soft);
       border: 1px solid rgba(56, 189, 248, 0.24);
@@ -251,13 +250,23 @@
       display: block;
       color: #ffffff;
       font-size: 1.35rem;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.35rem;
     }
 
     .stat-card span,
     .project-card p,
-    .section-lead {
+    .section-lead,
+    .focus-list li {
       color: var(--muted);
+    }
+
+    .focus-list {
+      margin: 0.85rem 0 0;
+      padding-left: 1.1rem;
+    }
+
+    .focus-list li {
+      margin-bottom: 0.25rem;
     }
 
     section {
@@ -292,25 +301,6 @@
     .section-lead {
       max-width: 900px;
       margin-bottom: 1.1rem;
-    }
-
-    .badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 1rem;
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.42rem 0.7rem;
-      border-radius: 999px;
-      background: var(--green-soft);
-      color: #b8f7cf;
-      border: 1px solid rgba(34, 197, 94, 0.28);
-      font-size: 0.9rem;
-      font-weight: 800;
     }
 
     .project-card {
@@ -404,7 +394,7 @@
   <main class="page">
     <section class="hero">
       <div class="hero-content">
-        <div class="eyebrow">Blue Team | DFIR | Threat Hunting | Detection Engineering</div>
+        <div class="eyebrow">Blue Team</div>
 
         <h1>Dennis Kontic Cybersecurity Lab Portfolio</h1>
 
@@ -428,21 +418,41 @@
       <div class="stat-card">
         <strong>Blue Team</strong>
         <span>SOC investigations, incident response, and threat hunting.</span>
+        <ul class="focus-list">
+          <li>SOC analysis</li>
+          <li>Incident response</li>
+          <li>Threat hunting</li>
+        </ul>
       </div>
 
       <div class="stat-card">
         <strong>DFIR</strong>
         <span>Windows artifacts, memory analysis, and malware triage.</span>
+        <ul class="focus-list">
+          <li>Digital forensics</li>
+          <li>Memory analysis</li>
+          <li>Malware analysis</li>
+        </ul>
       </div>
 
       <div class="stat-card">
         <strong>Detection</strong>
         <span>MITRE mapping, alert logic, and investigation workflows.</span>
+        <ul class="focus-list">
+          <li>Detection engineering</li>
+          <li>Threat intelligence</li>
+          <li>Web security</li>
+        </ul>
       </div>
 
       <div class="stat-card">
         <strong>Content</strong>
         <span>Technical writeups and DonkeySec YouTube walkthroughs.</span>
+        <ul class="focus-list">
+          <li>Lab documentation</li>
+          <li>Project walkthroughs</li>
+          <li>Defensive security education</li>
+        </ul>
       </div>
     </div>
 
@@ -450,19 +460,12 @@
       <h2>About This Portfolio</h2>
 
       <p class="section-lead">
-        This repository is focused on authorized labs, public training platforms, personal research, and sanitized professional work. No confidential employer, customer, or production data is included.
+        This portfolio is designed to give recruiters, hiring managers, and security professionals a clear view of my practical cybersecurity work. Each project focuses on how I approach evidence, analyze attacker behavior, document findings, and connect technical activity to defensive security outcomes.
       </p>
 
-      <div class="badge-row">
-        <span class="badge">SOC Analysis</span>
-        <span class="badge">Incident Response</span>
-        <span class="badge">Digital Forensics</span>
-        <span class="badge">Threat Hunting</span>
-        <span class="badge">Threat Intelligence</span>
-        <span class="badge">Malware Analysis</span>
-        <span class="badge">Detection Engineering</span>
-        <span class="badge">Web Security</span>
-      </div>
+      <p class="section-lead">
+        The main purpose of this site is to show how I think as a blue team analyst. Instead of only listing certifications, this portfolio shows investigations, case notes, detection logic, forensic analysis, threat intelligence research, and technical walkthroughs that demonstrate applied skill.
+      </p>
     </section>
 
     <section id="projects">
