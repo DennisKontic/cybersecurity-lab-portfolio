@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Dennis Kontic Cybersecurity Lab Portfolio</title>
-  <meta name="description" content="Dennis Kontic cybersecurity lab portfolio focused on blue team, SOC analysis, DFIR, threat hunting, malware analysis, threat intelligence, and detection engineering." />
+
+  <meta
+    name="description"
+    content="Dennis Kontic cybersecurity lab portfolio focused on blue team, SOC analysis, DFIR, threat hunting, malware analysis, threat intelligence, and detection engineering."
+  />
 
   <style>
     :root {
@@ -138,7 +143,7 @@
     .hero-content {
       position: relative;
       z-index: 1;
-      max-width: 880px;
+      max-width: 900px;
     }
 
     .eyebrow {
@@ -168,7 +173,7 @@
     .hero p {
       color: var(--muted);
       font-size: 1.08rem;
-      max-width: 850px;
+      max-width: 880px;
       margin: 0 0 1rem;
     }
 
@@ -219,7 +224,6 @@
     }
 
     .stats-grid,
-    .card-grid,
     .project-grid {
       display: grid;
       gap: 1rem;
@@ -230,16 +234,11 @@
       margin: 1.5rem 0 2rem;
     }
 
-    .card-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
     .project-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .stat-card,
-    .panel,
     .project-card {
       background: linear-gradient(145deg, rgba(13, 24, 41, 0.96), rgba(19, 35, 59, 0.90));
       border: 1px solid var(--border);
@@ -256,10 +255,8 @@
     }
 
     .stat-card span,
-    .panel p,
     .project-card p,
-    .section-lead,
-    li {
+    .section-lead {
       color: var(--muted);
     }
 
@@ -293,7 +290,7 @@
     }
 
     .section-lead {
-      max-width: 820px;
+      max-width: 900px;
       margin-bottom: 1.1rem;
     }
 
@@ -314,12 +311,6 @@
       border: 1px solid rgba(34, 197, 94, 0.28);
       font-size: 0.9rem;
       font-weight: 800;
-    }
-
-    .panel ul,
-    .project-card ul {
-      margin: 0.7rem 0 0;
-      padding-left: 1.2rem;
     }
 
     .project-card {
@@ -377,7 +368,6 @@
 
     @media (max-width: 920px) {
       .stats-grid,
-      .card-grid,
       .project-grid {
         grid-template-columns: 1fr;
       }
@@ -401,10 +391,11 @@
         <strong>Dennis Kontic</strong>
         <span>Cybersecurity Lab Portfolio</span>
       </div>
+
       <nav class="nav-links">
         <a href="#projects">Projects</a>
-        <a href="#focus">Focus Areas</a>
-        <a href="https://github.com/DennisKontic/cybersecurity-lab-portfolio">GitHub</a>
+        <a href="https://denniskontic.github.io/whoami/">Main Portfolio</a>
+        <a href="https://github.com/DennisKontic">GitHub</a>
         <a href="https://www.youtube.com/@DonkeySec">YouTube</a>
       </nav>
     </div>
@@ -414,17 +405,20 @@
     <section class="hero">
       <div class="hero-content">
         <div class="eyebrow">Blue Team | DFIR | Threat Hunting | Detection Engineering</div>
+
         <h1>Dennis Kontic Cybersecurity Lab Portfolio</h1>
+
         <p>
           Welcome to my cybersecurity project portfolio. This site highlights hands on technical work across SOC analysis, digital forensics, incident response, malware analysis, threat intelligence, and detection engineering.
         </p>
+
         <p>
           My goal is to show practical cybersecurity skills beyond certifications by documenting how I investigate alerts, reconstruct attacks, analyze evidence, map activity to MITRE ATT&CK, and communicate findings clearly.
         </p>
 
         <div class="button-row">
           <a class="button button-primary" href="#projects">View Projects</a>
-          <a class="button button-secondary" href="https://github.com/DennisKontic/cybersecurity-lab-portfolio">View GitHub Repository</a>
+          <a class="button button-secondary" href="https://denniskontic.github.io/whoami/">Main Portfolio</a>
           <a class="button button-secondary" href="https://www.youtube.com/@DonkeySec">DonkeySec YouTube</a>
         </div>
       </div>
@@ -435,14 +429,17 @@
         <strong>Blue Team</strong>
         <span>SOC investigations, incident response, and threat hunting.</span>
       </div>
+
       <div class="stat-card">
         <strong>DFIR</strong>
         <span>Windows artifacts, memory analysis, and malware triage.</span>
       </div>
+
       <div class="stat-card">
         <strong>Detection</strong>
         <span>MITRE mapping, alert logic, and investigation workflows.</span>
       </div>
+
       <div class="stat-card">
         <strong>Content</strong>
         <span>Technical writeups and DonkeySec YouTube walkthroughs.</span>
@@ -451,6 +448,7 @@
 
     <section>
       <h2>About This Portfolio</h2>
+
       <p class="section-lead">
         This repository is focused on authorized labs, public training platforms, personal research, and sanitized professional work. No confidential employer, customer, or production data is included.
       </p>
@@ -468,56 +466,17 @@
     </section>
 
     <section id="projects">
-      <h2>Featured Project Categories</h2>
+      <h2>All Technical Projects</h2>
+
       <p class="section-lead">
-        These projects are organized around the areas I want to grow in professionally: SOC operations, incident response, digital forensics, malware analysis, threat intelligence, and detection engineering.
+        These projects document hands on defensive security work across lab environments, public training platforms, personal research, and sanitized professional experience.
       </p>
-
-      <div class="card-grid">
-        <div class="panel">
-          <h3>Incident Response and DFIR</h3>
-          <p>Host compromise, phishing, Windows event logs, memory analysis, and forensic artifact review.</p>
-          <ul>
-            <li><a href="./projects/btlo_deep_blue_investigation.md">Deep Blue Investigation</a></li>
-            <li><a href="./projects/btlo_countdown_digital_forensics_lab.md">Countdown Digital Forensics Lab</a></li>
-            <li><a href="./projects/reverse_malware_engineering_blackenergy2_lab.md">Reverse Malware Engineering Lab</a></li>
-            <li><a href="./projects/osint_digital_forensics_cerulean_lab.md">OSINT and Digital Forensics Lab</a></li>
-          </ul>
-        </div>
-
-        <div class="panel">
-          <h3>SOC Analysis and Detection Engineering</h3>
-          <p>Alert triage, incident handling, threat hunting, Microsoft Sentinel, Splunk, and detection logic.</p>
-          <ul>
-            <li><a href="./projects/microsoft_sentinel_challenge_lab.md">Microsoft Sentinel Challenge Lab</a></li>
-            <li><a href="./projects/tryhackme_phishing_soc_simulator_splunk.md">SOC Simulator: Introduction to Phishing</a></li>
-            <li><a href="./projects/tryhackme_phishing_unfolding_soc_simulator_splunk.md">SOC Simulator: Phishing Unfolding</a></li>
-            <li><a href="./projects/full_mitre_attack_coverage_map.md">Full MITRE ATT&CK Coverage Map</a></li>
-          </ul>
-        </div>
-
-        <div class="panel">
-          <h3>Threat Intelligence and Malware Analysis</h3>
-          <p>IOC extraction, adversary analysis, malware behavior, sandbox analysis, and attribution workflows.</p>
-          <ul>
-            <li><a href="./projects/osint_threat_intelligence_haunted_company_lab.md">Haunted Company Threat Intelligence Lab</a></li>
-            <li><a href="./projects/tusk_infostealer_threat_intel_lab.md">Tusk InfoStealer Lab</a></li>
-            <li><a href="./projects/cyberdefenders_oski_stealc_malware_analysis.md">Oski Stealc Malware Analysis</a></li>
-            <li><a href="./projects/anyrun_real_life_phishing_message_analysis.md">Real Life Phishing Message Analysis</a></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Selected Technical Projects</h2>
 
       <div class="project-grid">
         <article class="project-card">
           <div class="project-meta">
             <span class="chip">DFIR</span>
             <span class="chip">Windows Logs</span>
-            <span class="chip">Incident Response</span>
           </div>
           <h3>Deep Blue Investigation</h3>
           <p>Windows event log investigation involving suspicious process execution, Meterpreter style activity, service creation, and local account persistence.</p>
@@ -528,7 +487,6 @@
           <div class="project-meta">
             <span class="chip">BEC</span>
             <span class="chip">Azure Logs</span>
-            <span class="chip">Email Security</span>
           </div>
           <h3>BEC KY Investigation</h3>
           <p>Business Email Compromise investigation using Azure audit logs, email exports, suspicious inbox rules, and financial fraud indicators.</p>
@@ -537,88 +495,199 @@
 
         <article class="project-card">
           <div class="project-meta">
+            <span class="chip">Certification Labs</span>
+            <span class="chip">CEH</span>
+          </div>
+          <h3>CEHv13 Academia ELITE Labs</h3>
+          <p>Hands on lab bundle covering reconnaissance, enumeration, web application testing, cloud security, cryptography, and security tooling.</p>
+          <a href="./projects/cehv13_academia_elite_labs.md">View project</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="chip">Malware</span>
+            <span class="chip">ANY.RUN</span>
+          </div>
+          <h3>Oski Stealc Malware Analysis</h3>
+          <p>Sandbox and threat intelligence analysis of Stealc malware behavior, credential theft, configuration details, and MITRE ATT&CK mapping.</p>
+          <a href="./projects/cyberdefenders_oski_stealc_malware_analysis.md">View project</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="chip">Tabletop</span>
+            <span class="chip">Incident Response</span>
+          </div>
+          <h3>APT34 OilRig Tabletop Exercise</h3>
+          <p>Incident response simulation focused on unauthorized email access, lateral movement, containment, recovery, and response decision making.</p>
+          <a href="./projects/tryhackme_apt34_oilrig_tabletop.md">View project</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="chip">Tabletop</span>
+            <span class="chip">APT29</span>
+          </div>
+          <h3>APT29 Cozy Bear Tabletop Exercise</h3>
+          <p>Incident response simulation involving unauthorized access, data exfiltration concerns, containment, escalation, and recovery planning.</p>
+          <a href="./projects/tryhackme_apt29_cozy_bear_tabletop.md">View project</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="chip">Tabletop</span>
+            <span class="chip">Cloud</span>
+          </div>
+          <h3>UNC3944 Scattered Spider Tabletop Exercise</h3>
+          <p>Data theft tabletop exercise involving administrator misuse, cloud activity, Linux and Mac systems, containment, and team communication.</p>
+          <a href="./projects/tryhackme_unc3944_scattered_spider_tabletop.md">View project</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="chip">Threat Intel</span>
+            <span class="chip">Crypto Theft</span>
+          </div>
+          <h3>Tusk InfoStealer Threat Intelligence Lab</h3>
+          <p>Threat intelligence investigation involving InfoStealer activity, malicious infrastructure, IOC extraction, and cryptocurrency wallet movement.</p>
+          <a href="./projects/tusk_infostealer_threat_intel_lab.md">View project</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="chip">Professional Project</span>
+            <span class="chip">Tabletop</span>
+          </div>
+          <h3>Attacker Vs Six Defenders Tabletop Exercise</h3>
+          <p>Defensive exercise design focused on attacker actions, defender counters, evidence sources, telemetry, and detection gap identification.</p>
+          <a href="./projects/attacker_vs_six_defenders_tabletop_exercise.md">View project</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
             <span class="chip">Detection Engineering</span>
             <span class="chip">MITRE ATT&CK</span>
-            <span class="chip">Professional Project</span>
           </div>
           <h3>Full MITRE ATT&CK Coverage Map</h3>
-          <p>A sanitized detection engineering project mapping attacker behavior, telemetry, and detection logic across multiple security tools.</p>
+          <p>Sanitized detection engineering project mapping attacker behavior, telemetry, and detection logic across multiple security tools.</p>
           <a href="./projects/full_mitre_attack_coverage_map.md">View project</a>
         </article>
 
         <article class="project-card">
           <div class="project-meta">
-            <span class="chip">Network Forensics</span>
-            <span class="chip">Wireshark</span>
-            <span class="chip">CVE Analysis</span>
+            <span class="chip">Browser Extension</span>
+            <span class="chip">Credential Theft</span>
           </div>
-          <h3>OpenWire Wireshark Analysis</h3>
-          <p>Network traffic analysis of Apache ActiveMQ exploitation through OpenWire, malicious XML retrieval, and reverse shell payload delivery.</p>
-          <a href="./projects/cyberdefenders_openwire_wireshark_analysis.md">View project</a>
+          <h3>Malicious ChatGPT Browser Extension Analysis</h3>
+          <p>Malicious browser extension analysis covering obfuscation, credential theft, keylogging, cookie access, AES encryption, and exfiltration.</p>
+          <a href="./projects/cyberdefenders_malicious_chatgpt_browser_extension_analysis.md">View project</a>
         </article>
 
         <article class="project-card">
           <div class="project-meta">
             <span class="chip">Memory Forensics</span>
             <span class="chip">Volatility</span>
-            <span class="chip">Malware</span>
           </div>
           <h3>Volatility Reveal Memory Analysis</h3>
-          <p>Endpoint memory forensics focused on suspicious PowerShell activity, remote DLL execution, and malware family identification.</p>
+          <p>Endpoint memory forensics focused on suspicious PowerShell activity, remote DLL execution, user context, and malware identification.</p>
           <a href="./projects/cyberdefenders_volatility_reveal_memory_analysis.md">View project</a>
         </article>
 
         <article class="project-card">
           <div class="project-meta">
-            <span class="chip">Browser Extension</span>
-            <span class="chip">JavaScript</span>
-            <span class="chip">Credential Theft</span>
+            <span class="chip">Network Forensics</span>
+            <span class="chip">Wireshark</span>
           </div>
-          <h3>Malicious ChatGPT Browser Extension Analysis</h3>
-          <p>Analysis of a fake browser extension with credential theft, keystroke logging, cookie access, AES encryption, and image based exfiltration.</p>
-          <a href="./projects/cyberdefenders_malicious_chatgpt_browser_extension_analysis.md">View project</a>
+          <h3>OpenWire Wireshark Analysis</h3>
+          <p>Packet capture investigation of Apache ActiveMQ exploitation, OpenWire traffic, malicious XML retrieval, and reverse shell payload delivery.</p>
+          <a href="./projects/cyberdefenders_openwire_wireshark_analysis.md">View project</a>
         </article>
-      </div>
-    </section>
 
-    <section id="focus">
-      <h2>Technical Focus Areas</h2>
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="chip">Microsoft Sentinel</span>
+            <span class="chip">SOC</span>
+          </div>
+          <h3>Microsoft Sentinel Challenge Lab</h3>
+          <p>SOC investigation lab focused on Microsoft Sentinel incidents, Log Analytics, entity review, incident ownership, and escalation workflow.</p>
+          <a href="./projects/microsoft_sentinel_challenge_lab.md">View project</a>
+        </article>
 
-      <div class="card-grid">
-        <div class="panel">
-          <h3>Blue Team Operations</h3>
-          <ul>
-            <li>SOC alert triage</li>
-            <li>Incident investigation</li>
-            <li>Threat hunting</li>
-            <li>Case documentation</li>
-          </ul>
-        </div>
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="chip">Digital Forensics</span>
+            <span class="chip">OSINT</span>
+          </div>
+          <h3>OSINT and Digital Forensics Cerulean Lab</h3>
+          <p>Forensic investigation involving suspicious RDP activity, browser history, Slack usage, Google Drive activity, and Windows Defender logs.</p>
+          <a href="./projects/osint_digital_forensics_cerulean_lab.md">View project</a>
+        </article>
 
-        <div class="panel">
-          <h3>Digital Forensics and Malware Analysis</h3>
-          <ul>
-            <li>Windows artifacts</li>
-            <li>Memory analysis</li>
-            <li>Phishing analysis</li>
-            <li>Malware behavior review</li>
-          </ul>
-        </div>
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="chip">Reverse Engineering</span>
+            <span class="chip">BlackEnergy 2</span>
+          </div>
+          <h3>Reverse Malware Engineering BlackEnergy 2 Lab</h3>
+          <p>Memory based malware investigation using Volatility 2, malfind, SSDT hooks, driver dumping, and SHA256 enrichment.</p>
+          <a href="./projects/reverse_malware_engineering_blackenergy2_lab.md">View project</a>
+        </article>
 
-        <div class="panel">
-          <h3>Detection and Threat Intelligence</h3>
-          <ul>
-            <li>MITRE ATT&CK mapping</li>
-            <li>Detection logic</li>
-            <li>IOC analysis</li>
-            <li>Adversary behavior analysis</li>
-          </ul>
-        </div>
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="chip">Digital Forensics</span>
+            <span class="chip">Autopsy</span>
+          </div>
+          <h3>Countdown Digital Forensics Lab</h3>
+          <p>Forensic disk image investigation involving Autopsy, Windows artifacts, messaging data, browser history, thumbnail cache, and SQLite review.</p>
+          <a href="./projects/btlo_countdown_digital_forensics_lab.md">View project</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="chip">OSINT</span>
+            <span class="chip">Threat Intel</span>
+          </div>
+          <h3>Haunted Company Threat Intelligence Lab</h3>
+          <p>Threat intelligence investigation involving Base64 decoding, ExifTool metadata, IOC extraction, adversary analysis, and web shell attribution.</p>
+          <a href="./projects/osint_threat_intelligence_haunted_company_lab.md">View project</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="chip">SOC Simulator</span>
+            <span class="chip">Splunk</span>
+          </div>
+          <h3>Introduction to Phishing SOC Simulator</h3>
+          <p>Splunk based SOC simulator lab focused on phishing alerts, suspicious emails, attachment evidence, case reports, and True Positive closure.</p>
+          <a href="./projects/tryhackme_phishing_soc_simulator_splunk.md">View project</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="chip">SOC Simulator</span>
+            <span class="chip">Splunk</span>
+          </div>
+          <h3>Phishing Unfolding SOC Simulator</h3>
+          <p>Live phishing attack simulation involving PowerShell execution, reverse shell behavior, suspicious DNS requests, and case reporting.</p>
+          <a href="./projects/tryhackme_phishing_unfolding_soc_simulator_splunk.md">View project</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="chip">Phishing</span>
+            <span class="chip">ANY.RUN</span>
+          </div>
+          <h3>Real Life Phishing Message Analysis Using ANY.RUN</h3>
+          <p>Safe analysis of real phishing messages using ANY.RUN to inspect suspicious links, redirect behavior, attacker intent, and indicators.</p>
+          <a href="./projects/anyrun_real_life_phishing_message_analysis.md">View project</a>
+        </article>
       </div>
     </section>
 
     <section>
       <h2>Current Direction</h2>
+
       <p class="section-lead">
         This portfolio is being actively expanded with more blue team investigations, lab writeups, and sanitized detection engineering work. The goal is to show both technical depth and clear communication across defensive cybersecurity domains.
       </p>
