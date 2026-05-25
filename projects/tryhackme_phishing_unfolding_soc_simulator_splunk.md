@@ -1,3 +1,7 @@
+---
+layout: project
+title: Phishing Unfolding SOC Simulator
+---
 # SOC Simulator: Phishing Unfolding Using Splunk
 
 ## Overview
