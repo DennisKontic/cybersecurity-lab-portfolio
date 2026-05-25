@@ -1,3 +1,7 @@
+---
+layout: project
+title: TryHackMe SAL1 Security Analyst
+---
 # TryHackMe SAL1 Security Analyst Certification
 
 ## Overview
