@@ -1,3 +1,7 @@
+---
+layout: project
+title: Microsoft Sentinel Challenge Lab
+---
 # Microsoft Sentinel Challenge Lab
 
 ## Overview
