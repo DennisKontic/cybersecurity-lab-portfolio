@@ -1,3 +1,7 @@
+---
+layout: project
+title: APT29 Cozy Bear Tabletop Exercise
+---
 # APT29 Cozy Bear Tabletop Exercise: Incident Response Simulation
 
 ## Overview
