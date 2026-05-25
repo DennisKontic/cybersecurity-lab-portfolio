@@ -1,3 +1,7 @@
+---
+layout: project
+title: Haunted Company Threat Intelligence Lab
+---
 # OSINT Threat Intelligence Lab: Haunted Company Investigation
 
 ## Overview
