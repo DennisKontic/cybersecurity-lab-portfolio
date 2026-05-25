@@ -1,3 +1,7 @@
+---
+layout: project
+title: Tusk InfoStealer Threat Intelligence Lab
+---
 # Tusk InfoStealer Threat Intelligence Lab
 
 ## Overview
