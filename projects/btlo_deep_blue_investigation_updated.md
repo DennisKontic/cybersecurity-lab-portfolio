@@ -1,3 +1,7 @@
+---
+layout: project
+title: Deep Blue Investigation
+---
 # Deep Blue Investigation: Blue Team Labs Online
 
 ## Overview
