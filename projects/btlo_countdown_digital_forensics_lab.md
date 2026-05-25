@@ -1,3 +1,7 @@
+---
+layout: project
+title: Countdown Digital Forensics Lab
+---
 # Digital Forensics Lab: Countdown Investigation
 
 ## Overview
