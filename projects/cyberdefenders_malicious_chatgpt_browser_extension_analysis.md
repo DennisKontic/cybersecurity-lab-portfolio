@@ -1,3 +1,7 @@
+---
+layout: project
+title: Malicious ChatGPT Browser Extension Analysis
+---
 # Malicious ChatGPT Browser Extension Analysis: CyberDefenders
 
 ## Overview
