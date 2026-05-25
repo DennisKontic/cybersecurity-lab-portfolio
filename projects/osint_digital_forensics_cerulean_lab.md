@@ -1,3 +1,7 @@
+---
+layout: project
+title: OSINT and Digital Forensics Cerulean Lab
+---
 # OSINT and Digital Forensics Lab: Cerulean Investigation
 
 ## Overview
