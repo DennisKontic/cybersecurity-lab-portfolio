@@ -1,3 +1,7 @@
+---
+layout: project
+title: UNC3944 Scattered Spider Tabletop Exercise
+---
 # UNC3944 Scattered Spider Tabletop Exercise: TryHackMe
 
 ## Overview
