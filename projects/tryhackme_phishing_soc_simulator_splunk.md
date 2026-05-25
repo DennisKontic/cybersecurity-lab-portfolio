@@ -1,3 +1,7 @@
+---
+layout: project
+title: Introduction to Phishing SOC Simulator
+---
 # SOC Simulator: Introduction to Phishing Using Splunk
 
 ## Overview
